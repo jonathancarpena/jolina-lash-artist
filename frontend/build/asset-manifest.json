@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7e98fcf.css",
+    "main.js": "/static/js/main.68b4da6a.js",
+    "static/media/action.png": "/static/media/action.cf115d2f839bce6feab3.png",
+    "static/media/meal.png": "/static/media/meal.fd0697be2f3e3464f7ab.png",
+    "static/media/core-values-accent.png": "/static/media/core-values-accent.67fc5ca6f94d5a0e85af.png",
+    "static/media/hero-accent.png": "/static/media/hero-accent.e915be03da3f526aec7c.png",
+    "static/media/steps-accent.png": "/static/media/steps-accent.ec5bfaaf6450ddbd75e5.png",
+    "static/media/meals-accent.png": "/static/media/meals-accent.d5212b6f5ddae1140a7a.png",
+    "index.html": "/index.html",
+    "main.a7e98fcf.css.map": "/static/css/main.a7e98fcf.css.map",
+    "main.68b4da6a.js.map": "/static/js/main.68b4da6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7e98fcf.css",
+    "static/js/main.68b4da6a.js"
+  ]
+}
