@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 // React Router
 import { Link } from 'react-router-dom'
 
@@ -8,8 +6,6 @@ import Brand from '../Brand'
 
 // Icons
 import { FaInstagram, FaTiktok } from 'react-icons/fa'
-import { FiMail } from 'react-icons/fi'
-
 
 const quickLinks = [
     { text: 'home', link: '/' },
@@ -34,43 +30,7 @@ export const Socials = [
     },
 ]
 function Footer() {
-    const [email, setEmail] = useState('')
-    const [ready, setReady] = useState(false)
 
-    function emailValidation(email) {
-        const domainExt = ["com", "edu", "net", "org"]
-
-        let valid = true;
-        if (!(email.includes('@'))) {
-            // Error: No '@'
-            valid = false
-        } else if (email.split('@')[1].split('.') === '') {
-            // Error: @.com
-            valid = false
-        } else if (!(domainExt.includes(email.split('@')[1].split('.')[1]))) {
-            // Error: .something
-            valid = false
-        }
-
-        return valid
-    }
-
-    useEffect(() => {
-        const okay = emailValidation(email)
-        if (okay) {
-            setReady(true)
-        } else {
-            setReady(false)
-        }
-    }, [email])
-
-    function handleNewsletterSubmit(e) {
-        e.preventDefault()
-        if (email !== "" && ready) {
-            alert(`See you soon!`)
-        }
-
-    }
     return (
         <div className='max-w-[1980px] w-full bg-primary-600 py-16 px-12  z-10 xl:px-80'>
 

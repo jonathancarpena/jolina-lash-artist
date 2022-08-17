@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 // Images
 import Review1 from '../../images/home/Reviews/review1.png'
 import Review2 from '../../images/home/Reviews/review2.png'
@@ -22,19 +20,6 @@ const Content = [Review1, Review2, Review3, Review4]
 
 
 function Reviews() {
-    const [hover, setHover] = useState([false, false, false, false])
-
-    function handleHoverEnter(idx) {
-        let copy = [false, false, false, false]
-        copy[idx] = true
-        setHover([...copy])
-    }
-
-    function handleHoverLeave(idx) {
-        let copy = [false, false, false, false]
-        copy[idx] = false
-        setHover([...copy])
-    }
 
     return (
         <div className=' bg-white  py-28 px-10 md:py-16 lg:p-32 xl:py-24'>
@@ -52,8 +37,7 @@ function Reviews() {
                 <Swiper
                     slidesPerView={3}
                     loop={true}
-                    className={`rounded-2xl  overflow-hidden `}
-
+                    className={`rounded-2xl  overflow-hidden cursor-grab active:cursor-grabbing`}
                     autoplay={{
                         delay: 1500,
                         disableOnInteraction: false,
@@ -61,13 +45,8 @@ function Reviews() {
                     modules={[Autoplay]}
                 >
                     {Content.map((item, idx) => (
-                        <SwiperSlide key={`Reviews-${idx}`} onMouseEnter={() => handleHoverEnter(idx)} onMouseLeave={() => handleHoverLeave(idx)} className='overflow-hidden  cursor-pointer relative'>
-                            {hover[idx] &&
-                                <span className='font-semibold text-3xl px-3 py-2 rounded-xl bg-white text-secondary absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-10'>
-                                    Get This Look
-                                </span>
-                            }
-                            <img src={item} alt={item} className='h-[700px] object-cover hover:brightness-[0.5] z-0' />
+                        <SwiperSlide key={`Reviews-${idx}`} className='overflow-hidden   relative'>
+                            <img src={item} alt={item} className='h-[700px] object-cover  z-0' />
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -85,10 +64,10 @@ function Reviews() {
                         disableOnInteraction: false,
                     }}
                     modules={[EffectFade, Autoplay]}
-                    className={`rounded-2xl overflow-hidden `}
+                    className={`rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing`}
                 >
                     {Content.map((item, idx) => (
-                        <SwiperSlide key={`Mobile-Reviews-${idx}`} className='overflow-hidden  cursor-pointer relative'>
+                        <SwiperSlide key={`Mobile-Reviews-${idx}`} className='overflow-hidden   relative'>
                             <img src={item} alt={item} className='w-full h-[500px] object-cover z-0 md:h-[700px] lg:h-[976px]' />
                         </SwiperSlide>
                     ))}

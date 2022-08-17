@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Router
+import { Link } from 'react-router-dom'
 
 // Icons
 import { BsAward } from 'react-icons/bs'
@@ -10,7 +12,7 @@ import { BsAward } from 'react-icons/bs'
 
 function Credentials() {
     return (
-        <div className='h-[92vh] relative flex flex-col bg-white  lg:h-screen xl:h-[92vh]  xl:flex-row xl:px-[15rem] xl:justify-around'>
+        <div className=' py-20 relative flex flex-col bg-white  lg:h-screen xl:h-[92vh]  xl:flex-row xl:px-[15rem] xl:justify-around'>
 
             <div className='relative p-10 flex justify-center items-center z-10 md:p-20 lg:p-32 xl:p-0 xl:w-[40%] '>
                 <BsAward className='text-[15rem] xl:text-[30rem] fill-secondary' />
@@ -28,9 +30,9 @@ function Credentials() {
                     day ahead and feel absolutely amazing.
                 </p>
 
-                <span className='text-[1.2rem] text-primary-400  font-semibold md:text-[1.5rem] lg:text-[2.5rem]  xl:text-[2rem]'>
-                    Learn More -
-                </span>
+                <Link to='/about' className='text-[1.2rem] text-primary-400 border-b-4 border-b-primary-400 w-max  font-semibold md:text-[1.5rem] lg:text-[2.5rem]  xl:text-[2rem]'>
+                    Learn More
+                </Link>
             </div>
         </div>
     )

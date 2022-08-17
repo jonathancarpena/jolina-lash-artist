@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react'
-
-// Hooks
-import useDeviceScroll from '../../lib/hooks/useDeviceScroll'
-
 // Router
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 
 // Redux
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { showSidedrawer, showMobileMenu, closeMobileMenu } from '../../redux/features/modal/modalSlice'
+import { showMobileMenu, closeMobileMenu } from '../../redux/features/modal/modalSlice'
 
 // Components
 import Brand from '../Brand'
@@ -73,7 +68,6 @@ const MobileMenu = () => {
 function Navbar() {
     const activeLinkStyles = 'text-white bg-primary-400'
     const navigate = useNavigate()
-    const { sideDrawer } = useSelector(state => state.modal)
     const { pathname } = useLocation()
     const dispatch = useDispatch()
 

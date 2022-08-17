@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, forwardRef } from 'react'
 import moment from 'moment'
 
 // Router
@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 // API
-import { get_AllBookings, post_AddDate, delete_RemoveDate, get_AllDates, delete_RemoveBooking } from '../../lib/api'
+import { get_AllBookings, post_AddDate, delete_RemoveDate, get_AllDates } from '../../lib/api'
 
 // Icons
-import { MdAttachMoney, MdLink } from 'react-icons/md'
+import { MdAttachMoney } from 'react-icons/md'
 import { BsCalendar2EventFill } from 'react-icons/bs'
 
 
@@ -20,7 +20,7 @@ import Loading from '../../components/Admin/Loading'
 import DatePicker from 'react-datepicker'
 
 
-const CustomDateButton = React.forwardRef(({ value, onClick }, ref) => (
+const CustomDateButton = forwardRef(({ value, onClick }, ref) => (
     <button className="w-max bg-blue-500 text-white rounded-lg p-2" onClick={onClick} ref={ref}>
         Pick Date
     </button>

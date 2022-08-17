@@ -71,7 +71,6 @@ export const get_SingleServiceByCategory = async (req, res) => {
     try {
         const _ = await Service.find()
         const servicesByCategory = _.filter((item) => item.category === category)
-        console.log(servicesByCategory)
         return res.status(200).json(servicesByCategory)
     } catch (error) {
         console.error(error)

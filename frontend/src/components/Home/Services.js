@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Router
+import { Link } from 'react-router-dom'
 
 // Icons
 import { MdPhotoCamera } from 'react-icons/md'
@@ -27,9 +29,9 @@ function Services() {
                         Laboriosam atque quia eius aperiam consectetur voluptatibus et odio,
                         necessitatibus nobis, repudiandae sequi
                     </p>
-                    <button className='block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
-                        Learn More
-                    </button>
+                    <Link to='/services/full' className='w-max block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
+                        See Details
+                    </Link>
                 </div>
             </div>
 
@@ -52,9 +54,9 @@ function Services() {
                         Laboriosam atque quia eius aperiam consectetur voluptatibus et odio,
                         necessitatibus nobis, repudiandae sequi
                     </p>
-                    <button className='block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
-                        Learn More
-                    </button>
+                    <Link to='/services/other' className='w-max block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
+                        See Details
+                    </Link >
                 </div>
 
                 {/* Ipad Mini, Ipad Pro, Desktop View */}
@@ -82,9 +84,9 @@ function Services() {
                         Laboriosam atque quia eius aperiam consectetur voluptatibus et odio,
                         necessitatibus nobis, repudiandae sequi
                     </p>
-                    <button className='block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
-                        Learn More
-                    </button>
+                    <Link to='/services/fill' className=' w-max block bg-primary-400 text-white font-semibold text-xl py-3 px-5 rounded-xl lg:w-[50%] xl:w-[300px]'>
+                        See Details
+                    </Link >
                 </div>
             </div>
 

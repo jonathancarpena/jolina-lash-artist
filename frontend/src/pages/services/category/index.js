@@ -104,7 +104,7 @@ function SingleService() {
                     {services.map((item, idx) => (
                         <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {services[idx].img[0] !== ""
-                                ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}-image`} className='w-full h-full object-cover' />
+                                ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}`} className='w-full h-full object-cover' />
                                 : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                             }
 
@@ -141,7 +141,7 @@ function SingleService() {
                         {services.map((item, idx) => (
                             <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                                 {services[idx].img[0] !== ""
-                                    ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}-image`} className='w-full h-full object-cover' />
+                                    ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}`} className='w-full h-full object-cover' />
                                     : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                                 }
                             </SwiperSlide>

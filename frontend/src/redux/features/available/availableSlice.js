@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import moment from "moment";
+
 // Urls
 import { get_AllDates } from "../../../lib/api/index";
 

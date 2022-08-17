@@ -5,7 +5,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react'
 import { useSelector } from 'react-redux'
 
 // Router
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 // API
 import { get_SingleService, put_UpdateService, IMAGE_API } from '../../../lib/api/index'
@@ -14,7 +14,6 @@ import { get_SingleService, put_UpdateService, IMAGE_API } from '../../../lib/ap
 import { replaceSpaces } from '../../../lib/utils'
 
 // Icons
-import { FaCamera } from 'react-icons/fa'
 import { MdOutlineFileUpload, MdEdit, MdCheck, MdClose, MdPhotoCamera } from 'react-icons/md'
 
 // Styles
@@ -319,7 +318,7 @@ const Img = ({ images, name, category, handleUpdate }) => {
                         <SwiperSlide key={`${name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`big-image-${name}-${idx}`} />
+                                : <img src={`${IMAGE_API}/${item}`} alt={`big-${name}-${idx}`} />
                             }
 
                             <div style={fileInputStyles} className='inline-block absolute top-5 left-[50%] -translate-x-[50%] w-max lg:hidden '>
@@ -359,7 +358,7 @@ const Img = ({ images, name, category, handleUpdate }) => {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg overflow-hidden`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[1.5rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`small-image-${name}-${idx}`} />
+                                : <img src={`${IMAGE_API}/${item}`} alt={`small-${name}-${idx}`} />
                             }
                         </div>
                     ))}

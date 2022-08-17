@@ -28,7 +28,7 @@ function Success() {
                 setOnMount(true)
             }, [1000])
         }
-    }, [])
+    }, [onMount])
 
     return (
         <div className='h-screen relative bg-white md:flex md:justify-center md:items-center md:bg-transparent md:top-10 xl:top-20'>

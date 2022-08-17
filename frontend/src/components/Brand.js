@@ -1,7 +1,3 @@
-import React from 'react'
-
-// Icons
-import { FaLeaf } from 'react-icons/fa'
 
 function Brand({ isDarkBg = false, onClick = null, sx, size = 'text-4xl' }) {
 

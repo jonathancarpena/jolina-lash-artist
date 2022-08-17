@@ -98,7 +98,7 @@ function SingleCategoryService() {
                         <SwiperSlide key={`${service.name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`big-image-${service.name}-${idx}`} />
+                                : <img src={`${IMAGE_API}/${item}`} alt={`big-${service.name}-${idx}`} />
                             }
                         </SwiperSlide>
                     ))}
@@ -113,7 +113,7 @@ function SingleCategoryService() {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[2rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`big-image-${service.name}-${idx}`} />
+                                : <img src={`${IMAGE_API}/${item}`} alt={`big-${service.name}-${idx}`} />
                             }
                         </div>
                     ))}
@@ -148,7 +148,7 @@ function SingleCategoryService() {
                             <SwiperSlide key={`${service.name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                                 {item === ''
                                     ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                    : <img src={`${IMAGE_API}/${item}`} alt={`big-image-${service.name}-${idx}`} />
+                                    : <img src={`${IMAGE_API}/${item}`} alt={`big-${service.name}-${idx}`} />
                                 }
                             </SwiperSlide>
                         ))}
@@ -164,7 +164,7 @@ function SingleCategoryService() {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[2rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`big-image-${service.name}-${idx}`} />
+                                : <img src={`${IMAGE_API}/${item}`} alt={`big-${service.name}-${idx}`} />
                             }
                         </div>
                     ))}

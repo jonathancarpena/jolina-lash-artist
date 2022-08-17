@@ -1,9 +1,4 @@
-import React, { useState, useEffect } from 'react'
-
-
-// Hooks
-import useDeviceScroll from '../../../lib/hooks/useDeviceScroll'
-
+import { useState, useEffect } from 'react'
 // Router
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 

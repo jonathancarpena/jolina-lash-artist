@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 // Utils
 import moment from 'moment';
 import { getMonthDateRange } from '../../lib/utils'

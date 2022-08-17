@@ -63,7 +63,7 @@ function App() {
 
   useEffect(() => {
     dispatch(refresh())
-  }, [location])
+  }, [location, dispatch])
 
   return (
     <Layout>

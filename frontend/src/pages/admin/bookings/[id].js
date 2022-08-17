@@ -5,7 +5,7 @@ import moment from 'moment'
 import { get_SingleBooking, put_UpdateBooking, delete_RemoveBooking } from '../../../lib/api/index'
 
 // Router
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 // Utils
 import { toTitleCase } from '../../../lib/utils'
@@ -179,7 +179,7 @@ function SingleBooking() {
                     setBooking(data)
                 })
         }
-    }, [booking, token])
+    }, [booking, token, _id])
 
     useEffect(() => {
         if (booking !== null) {
