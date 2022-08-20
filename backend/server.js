@@ -45,6 +45,14 @@ app.use("/api/services", serviceRoutes)
 app.use('/image', imageRoutes)
 
 
+// Uncomment For Development
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname.split("server")[0], "client", "build")))
+//     app.get("*", (req, res) => {
+//         res.sendFile(path.join(__dirname.split("server")[0], "client", "build", "index.html"))
+//     })
+// }
+
 // Port server is running on
 const PORT = process.env.PORT || 5000
 app.listen(PORT,
