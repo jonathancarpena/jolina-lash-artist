@@ -11,6 +11,10 @@ import { FaRegClock } from 'react-icons/fa'
 
 // Utils
 import { replaceSpaces } from '../../lib/utils'
+
+// Components
+import Loading from '../../components/Admin/Loading'
+
 export function generateDurationTime(duration) {
     const { start, end } = duration
     let a, b;
@@ -74,9 +78,8 @@ function Services() {
 
 
 
-    if (loading) {
-        return <h1>Loading...</h1>
-    }
+    if (loading) return <Loading />
+
     return (
         <div className='flex flex-col pt-[5rem]  lg:px-10 lg:pt-[12rem] lg:pb-24 xl:pb-28 xl:px-32 xl:pt-[14rem]'>
 
