@@ -114,7 +114,7 @@ function SingleCategoryService() {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[2rem] text-white' />
-                                : <img src={item} alt={`big-${service.name}-${idx}`} />
+                                : <Image src={item} alt={`big-${service.name}-${idx}`} />
                             }
                         </div>
                     ))}

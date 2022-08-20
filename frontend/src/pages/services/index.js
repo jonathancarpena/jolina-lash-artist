@@ -70,7 +70,6 @@ function Services() {
 
     useEffect(() => {
         if (content !== null) {
-            console.log(content)
             setLoading(false)
         }
     }, [content])

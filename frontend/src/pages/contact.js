@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { validateEmail } from '../lib/utils'
+import {
+    validateEmail,
+    // sendEmail 
+} from '../lib/utils'
 
 // Icons
 import { CgSpinnerTwoAlt } from 'react-icons/cg'
@@ -120,6 +123,13 @@ function Contact() {
         e.preventDefault()
         if (formValidate()) {
             // Send Email
+            // const params = {
+            //     first_name: fName,
+            //     last_name: lName,
+            //     email: email,
+            //     message: message
+            // }
+            // sendEmail(params)
             setLoading(true)
             setTimeout(() => {
                 handleFormReset()

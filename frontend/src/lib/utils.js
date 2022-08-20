@@ -54,3 +54,13 @@ export function getMonthDateRange(year, month) {
     // make sure to call toDate() for plain JavaScript date type
     return { start: startDate, end: endDate };
 }
+
+export function sendEmail(params) {
+    // console.log('sending params')
+    emailjs.send('JolinaLashes', 'lashes_contact_template', params, process.env.EMAILJS_KEY)
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+};
