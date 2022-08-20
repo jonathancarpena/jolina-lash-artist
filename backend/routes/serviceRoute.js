@@ -8,7 +8,6 @@ import {
     put_updateService,
 } from "../controller/serviceController.js";
 import auth from "../middleware/auth.js";
-import upload, { resizeImg } from '../middleware/upload.js'
 
 
 const router = Router();
@@ -44,8 +43,6 @@ router.delete("/:_id", delete_RemoveService)
 router.put(
     "/:_id",
     auth,
-    upload.single('image'),
-    resizeImg,
     put_updateService
 )
 

@@ -7,10 +7,11 @@ import { useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 
 // API
-import { get_SingleServiceByCategory, IMAGE_API } from '../../../lib/api'
+import { get_SingleServiceByCategory } from '../../../lib/api'
 
 // Components
 import Loading from '../../../components/Admin/Loading'
+import Image from '../../../components/Image'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -104,7 +105,7 @@ function SingleService() {
                     {services.map((item, idx) => (
                         <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {services[idx].img[0] !== ""
-                                ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}`} className='w-full h-full object-cover' />
+                                ? <Image src={services[idx].img[0]} alt={`${item.name}`} className='w-full h-full object-cover' />
                                 : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                             }
 
@@ -141,7 +142,7 @@ function SingleService() {
                         {services.map((item, idx) => (
                             <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                                 {services[idx].img[0] !== ""
-                                    ? <img src={`${IMAGE_API}/${services[idx].img[0]}`} alt={`${item.name}`} className='w-full h-full object-cover' />
+                                    ? <Image src={services[idx].img[0]} alt={`${item.name}`} className='w-full h-full object-cover' />
                                     : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                                 }
                             </SwiperSlide>

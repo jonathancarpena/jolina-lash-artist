@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // Urls
-import { get_AllDates } from "../../../lib/api/index";
+import { get_AllDates } from "../../../lib/api";
 
 
 
@@ -11,9 +11,7 @@ export const refresh = createAsyncThunk(
     async (arg, thunkAPI) => {
 
         try {
-            console.log('GET ALL DATES')
             const res = await get_AllDates()
-            console.log(res)
             if (res.length === 0) {
                 return thunkAPI.rejectWithValue({
                     refresh: Date.now()

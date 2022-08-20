@@ -13,7 +13,6 @@ import adminRoutes from './routes/adminRoutes.js'
 import availabilityRoutes from './routes/availabilityRoutes.js'
 import bookingRoutes from './routes/bookingRoute.js'
 import serviceRoutes from './routes/serviceRoute.js'
-import imageRoutes from './routes/imageRoute.js'
 
 dotenv.config()
 
@@ -42,7 +41,6 @@ app.use("/api/admin", adminRoutes)
 app.use("/api/availability", availabilityRoutes)
 app.use("/api/bookings", bookingRoutes)
 app.use("/api/services", serviceRoutes)
-app.use('/image', imageRoutes)
 
 
 // Uncomment For Development

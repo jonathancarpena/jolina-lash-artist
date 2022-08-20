@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 
 // API
-import { get_SingleBooking, put_UpdateBooking, delete_RemoveBooking } from '../../../lib/api/index'
+import { get_SingleBooking, put_UpdateBooking, delete_RemoveBooking } from '../../../lib/api'
 
 // Router
 import { useParams, useNavigate } from 'react-router-dom'

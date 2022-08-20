@@ -102,36 +102,9 @@ export const delete_RemoveService = async (req, res) => {
 export const put_updateService = async (req, res) => {
     console.log('PUT: Update Service')
     const { _id } = req.params
-    let body = { ...req.body }
+    const body = { ...req.body }
 
-    function checkIfImageIsPresent(images) {
-        let result = false
-        images.forEach((item) => {
-            if (item !== '') {
-                result = true
-            }
-            return result
-        })
-    }
-    if (req.file !== undefined && req.file.filename) {
-        const oldService = await Service.findById(_id)
-        if (checkIfImageIsPresent(oldService.img)) {
-            for (const image of oldService.img) {
-                if (image !== '') {
-                    fs.access(`${imageFolder}/${image}`, (err) => {
-                        if (err) {
-                            return
-                        } else {
-                            fs.unlinkSync(`${imageFolder}/${image}`)
-                        }
-                    })
-                }
-            }
 
-        }
-
-        body = { img: req.file.filename }
-    }
     try {
         let updatedService;
         const service = await Service.findById(_id)

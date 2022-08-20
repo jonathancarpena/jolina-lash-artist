@@ -23,7 +23,6 @@ import Eyes4 from '../../images/home/Hero/eyes4.png'
 import Eyes6 from '../../images/home/Hero/eyes6.png'
 import Eyes5 from '../../images/home/Hero/eyes5.png'
 
-
 // Icons
 import { FaHeart, FaArrowCircleRight, FaInstagram } from 'react-icons/fa'
 import { RiEyeCloseLine } from 'react-icons/ri'

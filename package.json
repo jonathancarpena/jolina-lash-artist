@@ -1,0 +1,23 @@
+{
+	"name": "lashes",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "concurrently \"npm run server --prefix backend\" \"npm run start --prefix frontend\"",
+		"server": "npm run start --prefix backend"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jonathancarpena/lashes.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jonathancarpena/lashes/issues"
+	},
+	"homepage": "https://github.com/jonathancarpena/lashes#readme",
+	"devDependencies": {
+		"concurrently": "^7.3.0"
+	}
+}

@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react'
-
+import { useEffect, useState, useCallback, useRef } from 'react'
 
 // Redux
 import { useSelector } from 'react-redux'
@@ -8,10 +7,8 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 // API
-import { get_SingleService, put_UpdateService, IMAGE_API } from '../../../lib/api/index'
-
-// Utils
-import { replaceSpaces } from '../../../lib/utils'
+import { get_SingleService, put_UpdateService } from '../../../lib/api'
+import { replaceImage, uploadImage } from '../../../lib/firebase'
 
 // Icons
 import { MdOutlineFileUpload, MdEdit, MdCheck, MdClose, MdPhotoCamera } from 'react-icons/md'
@@ -27,6 +24,7 @@ import "swiper/css";
 
 // Components
 import Loading from '../../../components/Admin/Loading'
+import Image from '../../../components/Image'
 
 const Name = ({ name, type, handleUpdate }) => {
     const [edit, setEdit] = useState()
@@ -297,12 +295,29 @@ const Img = ({ images, name, category, handleUpdate }) => {
 
 
     async function handleFileOnChange(e, idx) {
+
         if (e.target.files && e.target.files[0]) {
-            const res = await handleUpdate({ img: e.target.files[0], name: `${replaceSpaces(name)}-${category}-${idx}` })
-            if (res.ok) {
-                window.location.reload(false)
+            const imageUpload = e.target.files[0]
+            const fileExt = imageUpload.name.split('.')[1]
+            const filename = new Date().toISOString().replace(/:/g, '-') + '_' + name + '-' + category + '-' + idx + '.' + fileExt
+
+            if (images[idx]) {
+                // Replace Image in Firebase
+                replaceImage(images[idx], imageUpload, filename)
+                alert('Replace')
+
+            } else {
+                // Add Image to Firebase
+                uploadImage(imageUpload, filename)
+                alert('NEW')
+
             }
+
+            // // Update MongoDB Filename
+            handleUpdate({ img: filename })
+
         }
+
     }
     return (
         <div className='relative bg-transparent flex justify-center items-center'>
@@ -318,9 +333,10 @@ const Img = ({ images, name, category, handleUpdate }) => {
                         <SwiperSlide key={`${name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`big-${name}-${idx}`} />
+                                : <Image src={item} alt={`big-${name}-${idx}`} />
                             }
 
+                            {/* Mobile */}
                             <div style={fileInputStyles} className='inline-block absolute top-5 left-[50%] -translate-x-[50%] w-max lg:hidden '>
                                 <label className="custom-file-upload text-secondary text-base flex ">
                                     <input
@@ -334,6 +350,7 @@ const Img = ({ images, name, category, handleUpdate }) => {
                                 </label>
                             </div>
 
+                            {/* Desktop */}
                             <div style={fileInputStyles} className='absolute top-10 right-10 hidden lg:inline-block '>
                                 <label className="custom-file-upload text-secondary text-base flex ">
                                     <input
@@ -346,6 +363,7 @@ const Img = ({ images, name, category, handleUpdate }) => {
                                     <span>Upload</span>
                                 </label>
                             </div>
+
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -358,7 +376,7 @@ const Img = ({ images, name, category, handleUpdate }) => {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg overflow-hidden`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[1.5rem] text-white' />
-                                : <img src={`${IMAGE_API}/${item}`} alt={`small-${name}-${idx}`} />
+                                : <Image src={item} alt={`small-${name}-${idx}`} />
                             }
                         </div>
                     ))}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, cloneElement } from 'react'
 
 // API
-import { get_AllDates, get_AllServices, post_AddBooking } from '../../lib/api/index'
+import { get_AllDates, get_AllServices, post_AddBooking } from '../../lib/api'
 
 // Router
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -143,13 +143,13 @@ const Dropdown = ({ children, defaultOpen = false, z = "z-0" }) => {
     function generateHeader() {
         const header = children.find((item) => item.type.name === "DropdownHeader")
         return (
-            React.cloneElement(header)
+            cloneElement(header)
         )
     }
     function generateContent() {
         const content = children.find((item) => item.type.name === "DropdownContent")
         return (
-            React.cloneElement(content)
+            cloneElement(content)
         )
     }
 

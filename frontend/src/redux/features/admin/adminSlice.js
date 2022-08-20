@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // Urls
-import { post_Login } from "../../../lib/api/index";
+import { post_Login } from "../../../lib/api";
 
 const initialState = {
     ready: false,
