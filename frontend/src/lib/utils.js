@@ -1,4 +1,5 @@
 import moment from "moment"
+import emailjs from '@emailjs/browser'
 
 export function validateEmail(email) {
     const domainExt = ["com", "edu", "net", "org"]
