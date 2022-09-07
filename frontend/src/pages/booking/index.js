@@ -1,4 +1,4 @@
-import { useState, useEffect, cloneElement } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // API
 import { get_AllDates, get_AllServices, post_AddBooking } from '../../lib/api'
@@ -143,13 +143,13 @@ const Dropdown = ({ children, defaultOpen = false, z = "z-0" }) => {
     function generateHeader() {
         const header = children.find((item) => item.type.name === "DropdownHeader")
         return (
-            cloneElement(header)
+            React.cloneElement(header)
         )
     }
     function generateContent() {
         const content = children.find((item) => item.type.name === "DropdownContent")
         return (
-            cloneElement(content)
+            React.cloneElement(content)
         )
     }
 
