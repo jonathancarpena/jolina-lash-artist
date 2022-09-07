@@ -59,6 +59,8 @@
    -  Allows users to choose a date and time to book a service.
 -  Responsive Web Design
 -  Emailjs Integration
+- User Authentication
+- RESTful APIs
 
 ## 🛠 Installation and Setup
 
