@@ -1,4 +1,4 @@
-# Jolina Lashes
+# Jolina’s Lash Artist Services
 
 > A client's web application that showcases their lash artist business.
 
