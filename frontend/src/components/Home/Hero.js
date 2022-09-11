@@ -16,12 +16,12 @@ import "swiper/css";
 
 // Image
 // import Accent from '../../images/home/Hero/accent.png'
-import Eyes1 from '../../images/home/Hero/eyes1.png'
-import Eyes2 from '../../images/home/Hero/eyes2.png'
-import Eyes3 from '../../images/home/Hero/eyes3.png'
-import Eyes4 from '../../images/home/Hero/eyes4.png'
-import Eyes6 from '../../images/home/Hero/eyes6.png'
-import Eyes5 from '../../images/home/Hero/eyes5.png'
+import Eyes1 from '../../images/hero/eyes1.png'
+import Eyes2 from '../../images/hero/eyes2.png'
+import Eyes3 from '../../images/hero/eyes3.png'
+import Eyes4 from '../../images/hero/eyes4.png'
+import Eyes6 from '../../images/hero/eyes6.png'
+import Eyes5 from '../../images/hero/eyes5.png'
 
 // Icons
 import { FaHeart, FaArrowCircleRight, FaInstagram } from 'react-icons/fa'
@@ -33,18 +33,18 @@ function Hero() {
     const { ready: available } = useSelector(state => state.available)
 
     return (
-        <div className='pt-[5rem] px-8 bg-rest  flex flex-col  h-[100vh] overflow-hidden relative  lg:flex-row xl:px-36 xl:pt-[5rem]  lg:justify-between lg:items-center'>
+        <div className=' pt-[5rem] px-8 lg:px-24 bg-neutral-50 flex flex-col  h-screen overflow-hidden relative  lg:flex-row  lg:justify-between lg:items-center'>
 
             {/* Header */}
-            <div className=' absolute top-[50%] -translate-y-[40%] left-[50%] -translate-x-[50%] w-full px-8 text-secondary flex flex-col justify-center items-center lg:items-start  lg:w-[50%] lg:relative lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0'>
+            <div className=' absolute top-[50%] -translate-y-[40%] left-[50%] -translate-x-[50%] w-[90%]  text-white flex flex-col justify-center items-center lg:items-start  lg:w-[55%] lg:relative lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0'>
 
-                <h1 className='text-center font-design  font-black mb-10 text-5xl md:text-6xl lg:text-[5rem] lg:text-left'>
-                    Stunning <span className='underline underline-offset-2 text-primary-400'>lashes</span> in the blink of an eye
+                <h1 className='drop-shadow-[10px_10px_10px_rgba(0,0,0,0.65)] md:drop-shadow-[12px_12px_12px_rgba(0,0,0,0.65)] bg-gradient-to-br from-primary-300 to-primary-500 p-8 lg:p-10 rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-md rounded-bl-md text-center font-design  font-black mb-10 text-4xl md:text-6xl lg:text-[5rem] lg:text-left'>
+                    Stunning <span className=' underline   text-white'>lashes</span> in the blink of an eye
                     <span className='inline-block'><RiEyeCloseLine className='inline-block ml-3' /> <FaHeart className='inline-block xl:text-[3rem]' /></span>
                 </h1>
                 {available
                     ? <Link to='/booking'>
-                        <button className=' text-lg md:text-xl lg:text-2xl xl:text-3xl text-white flex justify-center items-center font-semibold space-x-2 bg-primary-400 px-10 py-3 xl:px-20 xl:py-5 rounded-full'>
+                        <button className=' hover:scale-110 active:scale-95 transition-all ease-in-out hover:bg-primary-400 active:bg-primary-600 text-lg md:text-xl lg:text-2xl xl:text-3xl text-white flex justify-center items-center font-semibold space-x-2 bg-pink-400 px-10 py-3 xl:px-20 xl:py-5 rounded-full'>
                             <span>
                                 Book an Appointment
                             </span>
@@ -53,12 +53,13 @@ function Hero() {
                     </Link>
                     :
                     <div className='flex flex-col space-y-4 xl:space-y-0 xl:flex-row items-center xl:space-x-5'>
-                        <button className='  text-white flex   justify-center items-center  font-semibold bg-primary-400 w-full py-3 xl:px-20 xl:py-5 rounded-full'>
-                            <span className='text-lg xl:text-[2rem]'>
+                        <button className=' bg-primary-300 rounded-xl text-white flex   justify-center items-center  font-semibold  w-full py-3 lg:px-20 lg:py-5 '>
+                            <span className='text-lg lg:text-[2rem]'>
                                 Fully Booked
                             </span>
+
                         </button>
-                        <a target="_blank" href={'https://www.instagram.com/j0lina.lashes/'} className=' mx-auto text-lg xl:text-xl font-semibold   ' rel="noopener noreferrer">
+                        <a target="_blank" href={'https://www.instagram.com/j0lina.lashes/'} className='text-secondary text-center mx-auto text-lg lg:text-xl font-semibold   ' rel="noopener noreferrer">
                             <span>Check Instagram for Updates</span>
                             <span className='inline-block  '>
                                 <FaInstagram className='mr-1 inline-block' />j0lina.lashes
@@ -80,7 +81,7 @@ function Hero() {
             {/* Desktop View */}
             <div className='hidden xl:block'>
                 <Swiper
-                    className='w-[500px] absolute -top-[2rem] rounded-2xl h-[1300px] rotate-[15deg] right-[8rem]'
+                    className='cursor-grab active:cursor-grabbing w-[500px] absolute -top-[2rem] rounded-2xl h-[1300px] rotate-[15deg] right-[8rem]'
                     spaceBetween={0}
                     slidesPerView={4.7}
                     loop={true}

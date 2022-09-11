@@ -66,7 +66,7 @@ const MobileMenu = () => {
 
 
 function Navbar() {
-    const activeLinkStyles = 'text-white bg-primary-400'
+    const activeLinkStyles = 'text-white bg-primary-500'
     const navigate = useNavigate()
     const { pathname } = useLocation()
     const dispatch = useDispatch()
@@ -77,20 +77,21 @@ function Navbar() {
         <>
             <nav className={` 
                   justify-center py-10 absolute top-5 
-                font-body flex items-center w-[90%]  transition-all duration-300  max-w-[1780px] z-[90] 
+                font-body flex items-center w-[90%]  transition-all duration-300  max-w-[1980px] z-[90] 
             `}>
 
                 {/* Nav Links */}
                 <div className={`hidden lg:inline-block  w-full drop-shadow-lg`}>
-                    <ul className={` overflow-hidden flex w-full justify-evenly bg-white rounded-r-full rounded-l-full `}>
+                    <ul className={`   flex w-full justify-evenly bg-white rounded-r-full rounded-l-full `}>
 
 
                         {navLinks.slice(0, 2).map((item, idx) => (
                             <li onClick={() => navigate(item.link)} key={item.link}
                                 className={`
+                                ${idx === 0 ? 'rounded-l-full' : ''}
                                      w-[20%] flex items-center justify-center text-2xl cursor-pointer uppercase font-bold
-                                     hover:bg-neutral-100 transition-all ease-in-out duration-200
-                                    ${pathname === item.link ? activeLinkStyles : 'text-primary-400'}
+                                     hover:bg-secondary hover:text-white hover:scale-105  transition-all ease-in-out duration-200
+                                    ${pathname === item.link ? activeLinkStyles : 'text-primary-500'}
                              `}>
                                 <Link to={item.link} >
                                     {item.text}
@@ -104,6 +105,7 @@ function Navbar() {
 
                         <div className='w-[20%] flex justify-center'>
                             <Brand
+                                darkBg={false}
                                 onClick={() => navigate('/')}
                             />
                         </div>
@@ -113,9 +115,10 @@ function Navbar() {
                         {navLinks.slice(2, navLinks.length).map((item, idx) => (
                             <li onClick={() => navigate(item.link)} key={item.link}
                                 className={`
+                                ${idx === 1 ? 'rounded-r-full' : ''}
                                     w-[20%] flex items-center justify-center text-2xl cursor-pointer uppercase font-bold
-                                    hover:bg-neutral-100 transition-all ease-in-out duration-200
-                                    ${pathname === item.link ? activeLinkStyles : 'text-primary-400'}
+                                    hover:bg-secondary hover:text-white hover:scale-105 transition-all ease-in-out duration-200
+                                    ${pathname.includes(item.link) ? activeLinkStyles : 'text-primary-500'}
                             `}>
                                 <Link to={item.link} >
                                     {item.text}
@@ -132,10 +135,12 @@ function Navbar() {
 
                 {/* Mobile Nav */}
 
-                <div className='lg:hidden fixed top-0 flex p-5  md:p-7 text-white items-center justify-between w-screen bg-primary-400 drop-shadow-lg rounded-b-md'>
-                    <h1 onClick={() => navigate('/')} className='text-4xl font-bold cursor-pointer'>
-                        Lashes
-                    </h1>
+                <div className='lg:hidden fixed top-0 flex p-5  md:p-7 text-white items-center justify-between w-screen bg-primary-500 drop-shadow-lg '>
+                    <Brand
+                        mobile={true}
+                        darkBg={true}
+                        onClick={() => navigate('/')}
+                    />
                     <MdMenu onClick={() => dispatch(showMobileMenu())} className='text-[2rem] cursor-pointer' />
 
                 </div>

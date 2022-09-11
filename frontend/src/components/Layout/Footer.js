@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Brand from '../Brand'
 
 // Icons
-import { FaInstagram, FaTiktok } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 
 const quickLinks = [
     { text: 'home', link: '/' },
@@ -15,7 +15,7 @@ const quickLinks = [
 ]
 
 const supportLinks = [
-    { text: 'terms & conditions', link: '/terms-and-conditions' },
+    { text: 'terms & conditions', link: '/contact' },
     { text: 'contact us', link: '/contact' },
 ]
 
@@ -24,65 +24,63 @@ export const Socials = [
         icon: <FaInstagram className='text-4xl text-white' />,
         link: 'https://www.instagram.com/j0lina.lashes/'
     },
-    {
-        icon: <FaTiktok className='text-4xl text-white' />,
-        link: ''
-    },
 ]
 function Footer() {
 
     return (
-        <div className='max-w-[1980px] w-full bg-primary-600 py-16 px-12  z-10 xl:px-80'>
+        <footer className='w-full bg-primary-500 flex justify-center items-center '>
 
-            {/* Links */}
-            <div className=' flex flex-col space-y-12 md:flex-row md:space-y-0 md:items-start md:space-x-10 md:justify-between mb-10'>
-                <Brand isDarkBg />
+            <div className='max-w-[1500px] w-full  py-16 px-12  z-10 '>
+                {/* Links */}
+                <div className=' flex flex-col space-y-12 md:flex-row md:space-y-0 md:items-start md:space-x-10 md:justify-between mb-10'>
+                    <Brand darkBg={true} />
 
-                {/* Quick Links */}
-                <div >
-                    <h4 className='text-white font-bold text-3xl mb-6'>
-                        Quick Links
-                    </h4>
-                    <ul className='flex flex-col space-y-5'>
-                        {quickLinks.map((item) => (
-                            <li key={item.text} className='text-white capitalize text-lg'>
-                                <Link to={item.link}>
-                                    {item.text}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                    {/* Quick Links */}
+                    <div >
+                        <h4 className='text-white font-bold text-3xl mb-6'>
+                            Quick Links
+                        </h4>
+                        <ul className='flex flex-col space-y-5'>
+                            {quickLinks.map((item) => (
+                                <li key={item.text} className='text-white capitalize text-lg'>
+                                    <Link to={item.link}>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                {/* Support Links */}
-                <div >
-                    <h4 className='text-white font-bold text-3xl mb-6'>
-                        Support
-                    </h4>
-                    <ul className='flex flex-col space-y-5'>
-                        {supportLinks.map((item) => (
-                            <li key={item.text} className='text-white capitalize text-lg'>
-                                <Link to={item.link}>
-                                    {item.text}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                    {/* Support Links */}
+                    <div >
+                        <h4 className='text-white font-bold text-3xl mb-6'>
+                            Support
+                        </h4>
+                        <ul className='flex flex-col space-y-5'>
+                            {supportLinks.map((item) => (
+                                <li key={item.text} className='text-white capitalize text-lg'>
+                                    <Link to={item.link}>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                {/* Socials */}
-                <div>
-                    <h4 className='text-white font-bold text-3xl mb-6'>
-                        Our Socials
-                    </h4>
+                    {/* Socials */}
+                    <div>
+                        <h4 className='text-white font-bold text-3xl mb-6'>
+                            Follow on Instagram
+                        </h4>
 
-                    <ul className='flex space-x-3'>
-                        {Socials.map((item, idx) => (
-                            <a key={`social-${idx}`} target="_blank" href={item.link} rel="noopener noreferrer">
-                                {item.icon}
-                            </a>
-                        ))}
-                    </ul>
+                        <ul className='flex space-x-3'>
+                            {Socials.map((item, idx) => (
+                                <a key={`social-${idx}`} target="_blank" href={item.link} rel="noopener noreferrer">
+                                    {item.icon}
+                                </a>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -90,7 +88,8 @@ function Footer() {
 
 
 
-        </div>
+
+        </footer>
 
     )
 }

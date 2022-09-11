@@ -28,7 +28,7 @@ function Layout({ children }) {
 
 
     return (
-        <div className='w-full  flex flex-col items-center bg-rest'>
+        <div className='w-full  min-h-screen flex flex-col items-center bg-neutral-50'>
             {adminView
                 ? <>
                     <AdminLayout>
@@ -46,7 +46,7 @@ function Layout({ children }) {
                 : <>
                     <Navbar />
 
-                    <div className={`w-full max-w-[1980px] min-h-[91vh] font-body bg-neutral-100`}>
+                    <div className={`w-full max-w-[1980px] min-h-[91vh] font-body `}>
                         {children}
                     </div>
                     <Footer />

@@ -1,8 +1,8 @@
 // Images
-import Review1 from '../../images/home/Reviews/review1.png'
-import Review2 from '../../images/home/Reviews/review2.png'
-import Review3 from '../../images/home/Reviews/review3.png'
-import Review4 from '../../images/home/Reviews/review4.png'
+import Review1 from '../../images/reviews/review1.png'
+import Review2 from '../../images/reviews/review2.png'
+import Review3 from '../../images/reviews/review3.png'
+import Review4 from '../../images/reviews/review4.png'
 
 // Import Swiper React components
 import { Autoplay, EffectFade } from 'swiper';
@@ -22,13 +22,13 @@ const Content = [Review1, Review2, Review3, Review4]
 function Reviews() {
 
     return (
-        <div className=' bg-white  py-28 px-10 md:py-16 lg:p-32 xl:py-24'>
+        <div className=' bg-secondary  py-28 px-10 md:py-16 lg:p-32 xl:py-24 rounded-t-xl'>
 
             {/* Header */}
-            <h1 className='text-2xl text-secondary space-x-4 flex justify-center items-center font-bold uppercase text-center md:text-4xl  lg:text-5xl xl:mx-10 xl:space-x-10'>
-                <FaHeart className='text-primary-400' />
-                <span>Client Love </span>
-                <FaHeart className='text-primary-400' />
+            <h1 className='text-2xl text-white space-x-4 flex justify-center items-center font-bold uppercase text-center md:text-4xl  lg:text-5xl xl:mx-10 xl:space-x-10'>
+                <FaHeart className='text-primary-500' />
+                <span>Client Love</span>
+                <FaHeart className='text-primary-500' />
             </h1>
 
             {/* Reviews */}

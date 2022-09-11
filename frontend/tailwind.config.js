@@ -24,21 +24,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'pattern': "url('/src/images/home/Hero/pattern.svg')"
-      },
       colors: {
         primary: {
-          50: '#fdf5f7',
-          150: '#f9e5eb',
-          100: '#fdf5f7',
-          200: '#f1c6d2',
-          300: '#eeb6c5',
-          400: '#e696ac',
-          500: '#de7693',
-          600: '#de7693',
-          700: '#d3476d',
-          800: '#cf3761',
+          100: '#fbdaeb',
+          200: '#f7b6d6',
+          300: '#f491c2',
+          400: '#f06dad',
+          500: '#ec4899',
+          600: '#bd3a7a',
+          700: '#8e2b5c',
+          800: '#5e1d3d',
+          900: '#2f0e1f',
         },
         rest: '#ECE7E9',
         analogous: '#e6a896',

@@ -80,10 +80,10 @@ function Services() {
     if (loading) return <Loading />
 
     return (
-        <div className='flex flex-col pt-[5rem]  lg:px-10 lg:pt-[12rem] lg:pb-24 xl:pb-28 xl:px-32 xl:pt-[14rem]'>
+        <div className='flex flex-col pt-[5rem] items-center justify-center lg:pb-28 lg:px-[8rem] lg:pt-[14rem]'>
 
             {/* Full */}
-            <div className='flex flex-col space-y-10 p-10 w-full rounded-t-2xl md:items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-10'>
+            <div className='lg:min-w-[1100px] px-5 flex flex-col space-y-10 py-10 rounded-t-2xl justify-center items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-20'>
                 <Link to={`/services/full`} className='w-max md:w-full lg:w-max'>
                     <div className='bg-white w-[300px] h-[300px]  md:w-full md:h-[150px] lg:w-[300px] lg:h-[300px] flex items-center justify-center'>
                         <h1 className='font-bold text-5xl text-secondary'>
@@ -126,7 +126,7 @@ function Services() {
             </div>
 
             {/* Fill */}
-            <div className='bg-rest flex flex-col space-y-10 p-10 w-full rounded-t-2xl md:items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-10'>
+            <div className='lg:min-w-[1100px]  px-5 bg-rest  flex flex-col space-y-10 py-10  rounded-t-2xl justify-center items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-20'>
                 <Link to={`/services/fill`} className='w-max md:w-full lg:w-max'>
                     <div className='bg-white w-[300px] h-[300px]  md:w-full md:h-[150px] lg:w-[300px] lg:h-[300px] flex items-center justify-center'>
                         <h1 className='font-bold text-5xl text-secondary flex flex-col items-center'>
@@ -167,7 +167,7 @@ function Services() {
             </div>
 
             {/* Mini */}
-            <div className='flex flex-col space-y-10 p-10 w-full rounded-t-2xl md:items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-10'>
+            <div className='lg:min-w-[1100px] px-5 flex flex-col  space-y-10 py-10 rounded-t-2xl justify-center items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-20'>
                 <Link to={`/services/mini-fill`} className='w-max md:w-full lg:w-max'>
                     <div className='bg-white w-[300px] h-[300px]  md:w-full md:h-[150px] lg:w-[300px] lg:h-[300px] flex items-center justify-center'>
                         <h1 className='font-bold text-5xl text-secondary flex flex-col items-center'>
@@ -210,7 +210,7 @@ function Services() {
             </div>
 
             {/* Other */}
-            <div className='bg-rest flex flex-col space-y-10 p-10 w-full rounded-t-2xl md:items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-10'>
+            <div className='lg:min-w-[1100px] px-5 bg-rest  flex flex-col space-y-10 py-10 rounded-t-2xl justify-center items-center md:p-20 lg:flex-row lg:p-10 lg:space-y-0 lg:space-x-20'>
                 <Link to={`/services/other`} className='w-max md:w-full lg:w-max'>
                     <div className='bg-white w-[300px] h-[300px]  md:w-full md:h-[150px] lg:w-[300px] lg:h-[300px] flex items-center justify-center'>
                         <h1 className=' text-center font-bold text-5xl text-secondary'>
@@ -239,7 +239,7 @@ function Services() {
 
                                     </p>
 
-                                    <p className='text-lg md:text-xl xl:ml-2'>
+                                    <p className='text-lg md:text-xl xl:ml-2 lg:min-w-[700px]'>
                                         <span className='mr-1.5 hidden xl:inline-block'>
                                             -
                                         </span>

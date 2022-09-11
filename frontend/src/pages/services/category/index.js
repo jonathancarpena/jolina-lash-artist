@@ -82,9 +82,9 @@ function SingleService() {
         return <Loading />
     }
     return (
-        <div className='relative min-h-screen flex flex-col pt-[8rem] md:pt-[12rem] md:px-20 md:pb-20 lg:pt-[15rem] xl:flex-row xl:space-x-20 xl:pt-[18rem] xl:pb-28 xl:px-32'>
+        <div className='relative min-h-screen flex flex-col pt-[8rem] md:pt-[12rem] md:px-20 md:pb-20 justify-center   lg:flex-row lg:space-x-[5rem] lg:pt-[19rem] lg:pb-28 lg:px-32'>
             {/* Breadcrumbs */}
-            <div className='hidden text-xl absolute md:flex md:top-[8.5rem] md:left-20 lg:top-[12rem] xl:top-[14rem] space-x-1 items-center'>
+            <div className='hidden text-xl absolute md:flex md:top-[8.5rem]  md:left-[24.5rem] lg:top-[12rem] xl:top-[14rem] space-x-1 items-center'>
                 <Link to='/services'>
                     Services
                 </Link>
@@ -289,7 +289,7 @@ function SingleService() {
                 }
 
                 {/* Description & Method */}
-                <div className='hidden bg-rest xl:flex flex-col space-y-5 rounded-xl p-5 mt-12'>
+                <div className='hidden bg-rest xl:flex flex-col space-y-5 rounded-xl p-5 mt-12 w-[700px]'>
                     <div>
                         <span className='font-semibold text-xl'>
                             Description:

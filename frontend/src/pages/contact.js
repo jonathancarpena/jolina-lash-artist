@@ -141,10 +141,19 @@ function Contact() {
     return (
         <div className='h-screen flex flex-col items-center space-y-5 md:pt-[10rem] md:pb-16 md:px-10 lg:pt-[14rem] xl:px-48'>
 
-            <div className='h-screen pt-[10rem] px-10 bg-white rounded-xl drop-shadow-lg md:p-10 md:h-full lg:h-max w-full max-w-[1000px]'>
-                <h1 className='text-secondary font-semibold text-4xl md:text-6xl mb-7 border-b-4 border-primary-400'>
-                    Contact Us
-                </h1>
+            <div className='h-screen pt-[10rem] px-10 bg-white rounded-xl flex flex-col space-y-5 drop-shadow-lg md:p-10 md:h-full lg:h-max w-full max-w-[1000px]'>
+                <div>
+                    <h1 className='text-secondary font-semibold text-4xl md:text-6xl mb-5 border-b-4 border-primary-400'>
+                        Contact Us
+                    </h1>
+
+                    <p>
+                        Any questions about the service, after-care, payments, inquiries etc...
+                    </p>
+                    <p>
+                        You can email me at: j.carpena17@yahoo.com
+                    </p>
+                </div>
 
 
                 <form onSubmit={handleContactSubmit} className='flex flex-col space-y-5 md:space-y-10 lg:space-y-5 '>
