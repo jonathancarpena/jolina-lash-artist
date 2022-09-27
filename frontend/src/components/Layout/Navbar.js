@@ -14,6 +14,8 @@ import { MdMenu, MdOutlineClose } from 'react-icons/md'
 
 // Constants
 import { Socials } from './Footer'
+console.log('Say what')
+
 const navLinks = [
     { text: 'about', link: '/about' },
     { text: 'contact', link: '/contact' },
@@ -129,7 +131,6 @@ function Navbar() {
 
                     </ul>
                 </div>
-
 
 
 

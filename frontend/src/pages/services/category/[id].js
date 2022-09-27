@@ -70,24 +70,24 @@ function SingleCategoryService() {
     }
     return (
         <div className='relative min-h-screen flex flex-col pt-[8rem] md:pt-[12rem] md:px-20 md:pb-20 justify-center   lg:flex-row lg:space-x-[5rem] lg:pt-[19rem] lg:pb-28 lg:px-32'>
-            {/* Breadcrumbs */}
-            <div className='hidden text-xl absolute md:flex md:top-[8.5rem] md:left-[24.5rem] lg:top-[12rem] xl:top-[14rem] space-x-1 items-center'>
-                <Link to='/services'>
-                    Services
-                </Link>
-                <FiChevronRight className='inline-block text-2xl' />
-                <Link to={`/services/${service.category}`} className='capitalize'>
-                    {service.category}
-                </Link>
-                <FiChevronRight className='inline-block text-2xl' />
-                <span className='capitalize font-semibold'>{service.name}</span>
 
-            </div>
 
 
             {/* Image Slider */}
             {/* Ipad Mini, Ipad Pro, Desktop View */}
-            <div className='hidden md:flex md:flex-col md:space-y-5 items-center xl:block md:mb-10 xl:mb-0'>
+            <div className='relative hidden md:flex md:flex-col md:space-y-5 items-center xl:block md:mb-10 xl:mb-0'>
+                {/* Breadcrumbs */}
+                <div className='hidden  absolute md:flex left-2 top-[-1rem] space-x-1 items-center'>
+                    <Link to='/services'>
+                        Services
+                    </Link>
+                    <FiChevronRight className='inline-block text-2xl' />
+                    <Link to={`/services/${service.category}`} className='capitalize'>
+                        {service.category}
+                    </Link>
+                    <FiChevronRight className='inline-block text-2xl' />
+                    <span className='capitalize font-bold '>{service.name}</span>
+                </div>
                 <Swiper
                     onSlideChange={(e) => setActiveIndex(e.activeIndex)}
                     ref={sliderRef}
@@ -99,7 +99,7 @@ function SingleCategoryService() {
                         <SwiperSlide key={`${service.name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                : <Image src={item} alt={`big-${service.name}-${idx}`} />
+                                : <Image src={item} alt={`big-${service.name}-${idx}`} sx="w-full h-full object-cover" />
                             }
                         </SwiperSlide>
                     ))}
@@ -108,15 +108,21 @@ function SingleCategoryService() {
                 {/* Mini Images */}
                 <ul className='flex space-x-4 '>
                     {service.img.map((item, idx) => (
-                        <div
-                            key={`${service.name}-mini-image-${idx}`}
-                            onClick={() => handleSlide(idx)}
-                            className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
-                            {item === ''
-                                ? <MdPhotoCamera className='text-[2rem] text-white' />
-                                : <Image src={item} alt={`big-${service.name}-${idx}`} />
+                        <>
+                            {item !== ""
+                                &&
+                                <div
+                                    key={`${service.name}-mini-image-${idx}`}
+                                    onClick={() => handleSlide(idx)}
+                                    className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
+                                    <Image src={item} alt={`big-${service.name}-${idx}`} sx="w-full h-full object-cover" />
+
+
+                                </div>
                             }
-                        </div>
+
+                        </>
+
                     ))}
                 </ul>
 
@@ -137,7 +143,8 @@ function SingleCategoryService() {
                 </h1>
 
                 {/* Image */}
-                <div className='px-8'>
+                <div className='px-8 '>
+
                     <Swiper
                         onSlideChange={(e) => setActiveIndex(e.activeIndex)}
                         ref={mobileSliderRef}
@@ -149,7 +156,7 @@ function SingleCategoryService() {
                             <SwiperSlide key={`${service.name}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                                 {item === ''
                                     ? <MdPhotoCamera className='text-[10rem] text-white' />
-                                    : <Image src={item} alt={`big-${service.name}-${idx}`} />
+                                    : <Image src={item} alt={`big-${service.name}-${idx}`} sx="w-full h-full object-cover" />
                                 }
                             </SwiperSlide>
                         ))}
@@ -165,7 +172,7 @@ function SingleCategoryService() {
                             className={`${activeIndex === idx ? 'ring-primary-400' : 'ring-transparent'} overflow-hidden cursor-pointer ring-4 bg-neutral-300 flex items-center justify-center w-[50px] h-[50px] rounded-lg`}>
                             {item === ''
                                 ? <MdPhotoCamera className='text-[2rem] text-white' />
-                                : <Image src={item} alt={`big-${service.name}-${idx}`} />
+                                : <Image src={item} alt={`big-${service.name}-${idx}`} sx="w-full h-full object-cover" />
                             }
                         </div>
                     ))}
@@ -177,11 +184,11 @@ function SingleCategoryService() {
                         <span>${service.price}</span>
 
                         {/* Service Time */}
-                        <span className=' font-normal text-neutral-400 text-[1.2rem] flex space-x-2'>
+                        <span className=' w-max font-normal text-neutral-400 text-[1.2rem] flex flex-col '>
                             <span>
                                 Service<FaRegClock className='inline-block ml-1' /> :
                             </span>
-                            <span>
+                            <span className=''>
                                 {generateDurationTime(service.duration)}
                             </span>
                         </span>

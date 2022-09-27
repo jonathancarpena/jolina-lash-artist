@@ -1,6 +1,6 @@
 
 // Images
-import Portrait from '../images/portrait.png'
+import Portrait from '../images/portrait.jpg'
 
 
 function About() {
@@ -12,7 +12,7 @@ function About() {
 
             <div className='z-[50] px-10 flex flex-col space-y-10 justify-center pt-[8rem]  items-center md:pt-[10rem] lg:pt-[14rem] lg:px-20 xl:flex-row xl:space-y-0 xl:px-32 xl:pt-[14rem] xl:space-x-24 '>
                 {/* Image */}
-                <div className='h-[400px] md:w-[400px] md:h-[600px] border-8 border-white drop-shadow-lg'>
+                <div className='h-[400px] md:w-[500px] md:h-[700px] border-8 border-white drop-shadow-lg'>
                     <img src={Portrait} alt={'portrait'} className='w-full h-full object-cover' />
                 </div>
 
@@ -28,10 +28,10 @@ function About() {
 
                     <div className='flex flex-col space-y-2.5'>
                         <span className='text-xl lg:text-3xl font-semibold'>
-                            - Who am is behing Jolina Lashes?
+                            - Who is behind Jolina Lashes?
                         </span>
                         <p className='ml-3 lg:text-xl'>
-                            I st
+                            Nice to meet you! My name is Jolina and I enjoy all things fashion from sneakers to dresses. I am currently enrolled as a student where I am studing to become a registered nurse.
                         </p>
                     </div>
 
@@ -40,9 +40,7 @@ function About() {
                             - How long have you been a lash artist?
                         </span>
                         <p className='ml-3 lg:text-xl'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Praesentium ipsa quisquam asperiores porro blanditiis aspernatur.
-                            Nisi porro ratione,
+                            {`I've been a lash artist since Sepetember 2019.`}
                         </p>
                     </div>
 
@@ -51,9 +49,12 @@ function About() {
                             - What made you want to start doing lashes?
                         </span>
                         <p className='ml-3 lg:text-xl'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Praesentium ipsa quisquam asperiores porro blanditiis aspernatur.
-                            Nisi porro ratione,
+                            {`Personally, it is incredibly fulfilling and satisfying 
+                            seeing my clients eye lashes transform into something more 
+                            beautiful. Although I am a busy student, I will always spare 
+                            time for my clients to ensure they feel their best with their
+                            amazing lashes.
+                            `}
                         </p>
                     </div>
 

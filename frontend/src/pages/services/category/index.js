@@ -83,29 +83,34 @@ function SingleService() {
     }
     return (
         <div className='relative min-h-screen flex flex-col pt-[8rem] md:pt-[12rem] md:px-20 md:pb-20 justify-center   lg:flex-row lg:space-x-[5rem] lg:pt-[19rem] lg:pb-28 lg:px-32'>
-            {/* Breadcrumbs */}
-            <div className='hidden text-xl absolute md:flex md:top-[8.5rem]  md:left-[24.5rem] lg:top-[12rem] xl:top-[14rem] space-x-1 items-center'>
-                <Link to='/services'>
-                    Services
-                </Link>
-                <FiChevronRight className='inline-block text-2xl' />
-                <span className='capitalize font-semibold'>{category}</span>
-            </div>
+
+
 
             {/* Image Slider */}
             {/* Ipad Mini, Ipad Pro, Desktop View */}
-            <div className='hidden md:block md:mb-10 xl:mb-0'>
+            <div className='hidden md:block md:mb-10 xl:mb-0 relative'>
+                {/* Breadcrumbs */}
+                <div className='hidden  absolute md:flex left-2 top-[-1.2rem] space-x-1 items-center'>
+                    <Link to='/services'>
+                        Services
+                    </Link>
+                    <FiChevronRight className='inline-block text-2xl' />
+                    <Link to={`/services/${category}`} className='font-bold capitalize'>
+                        {category}
+                    </Link>
+
+                </div>
                 <Swiper
                     onSlideChange={(e) => setActiveIndex(e.activeIndex)}
                     ref={sliderRef}
-                    className='w-[500px] h-[500px] rounded-2xl '
+                    className='w-[500px] h-[500px] rounded-2xl mt-4'
                     slidesPerView={1}
                     speed={300}
                 >
                     {services.map((item, idx) => (
                         <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                             {services[idx].img[0] !== ""
-                                ? <Image src={services[idx].img[0]} alt={`${item.name}`} className='w-full h-full object-cover' />
+                                ? <Image src={services[idx].img[0]} alt={`${item.name}`} sx="w-full h-full object-cover" />
                                 : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                             }
 
@@ -142,7 +147,7 @@ function SingleService() {
                         {services.map((item, idx) => (
                             <SwiperSlide key={`${category}-image-${idx}`} className={` bg-neutral-300 flex items-center justify-center w-[500px] h-[500px] `}>
                                 {services[idx].img[0] !== ""
-                                    ? <Image src={services[idx].img[0]} alt={`${item.name}`} className='w-full h-full object-cover' />
+                                    ? <Image src={services[idx].img[0]} alt={`${item.name}`} sx="w-full h-full object-cover" />
                                     : <span className='text-[10rem] text-white uppercase'>{generateServiceAbbrev(item.name)}</span>
                                 }
                             </SwiperSlide>
@@ -226,7 +231,7 @@ function SingleService() {
 
             {/* Desktop View */}
             {/* Details */}
-            <div className='hidden md:flex flex-col space-y-5 items-start text-secondary'>
+            <div className='min-h-[700px] hidden md:flex flex-col space-y-5 items-start text-secondary'>
 
                 {/* Name */}
                 <div>

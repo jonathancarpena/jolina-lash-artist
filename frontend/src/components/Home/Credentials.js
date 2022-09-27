@@ -20,8 +20,8 @@ function Credentials() {
                 <img src={Image} alt="certificate" className=' w-full h-full object-cover' />
             </div>
 
-            <div className='flex flex-col px-10 justify-center space-y-5 text-secondary z-10 md:px-20 md:space-y-10 xl:px-0 xl:w-[50%]'>
-                <h1 className='text-center ring-8 ring-secondary rounded-bl-[2rem]  rounded-tr-[2rem] p-5 bg-white text-[2rem] font-semibold text-primary-400  md:text-[3rem] lg:text-[5rem]'>
+            <div className='flex flex-col px-10 items-center justify-center space-y-5 text-secondary z-10 md:px-20 md:space-y-10 xl:px-0 xl:w-[50%]'>
+                <h1 className='w-max text-center ring-8 ring-secondary rounded-bl-[2rem]  rounded-tr-[2rem] p-5 bg-white text-[2rem] font-semibold text-primary-400  md:text-[3rem] lg:text-[5rem]'>
                     Be Your Best Self.
                 </h1>
 
@@ -31,7 +31,7 @@ function Credentials() {
 
                 </p>
 
-                <Link to='/about' className='hover:bg-white hover:text-primary-500 hover:scale-105 active:scale-95 transition-all duration-150 px-5 py-2 rounded-xl  text-white border-4 border-white w-max  font-semibold lg:text-[1.5rem] '>
+                <Link to='/about' className='place-self-end hover:bg-white hover:text-primary-500 hover:scale-105 active:scale-95 transition-all duration-150 px-5 py-2 rounded-xl  text-white border-4 border-white w-max  font-semibold lg:text-[1.5rem] '>
                     <span className='flex space-x-3 items-center'>
                         <span>
                             Learn More
