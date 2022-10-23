@@ -38,7 +38,7 @@ function Hero() {
             {/* Header */}
             <div className=' absolute top-[50%] -translate-y-[40%] left-[50%] -translate-x-[50%] w-[90%]  text-white flex flex-col justify-center items-center lg:items-start  lg:w-[55%] lg:relative lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0'>
 
-                <h1 className='drop-shadow-[10px_10px_10px_rgba(0,0,0,0.65)] md:drop-shadow-[12px_12px_12px_rgba(0,0,0,0.65)] bg-gradient-to-br from-primary-300 to-primary-500 p-8 lg:p-10 rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-md rounded-bl-md text-center font-design  font-black mb-10 text-4xl md:text-6xl lg:text-[5rem] lg:text-left'>
+                <h1 className='drop-shadow-[10px_10px_10px_rgba(0,0,0,0.65)] md:drop-shadow-[12px_12px_12px_rgba(0,0,0,0.65)] bg-gradient-to-br from-primary-300 to-primary-500 p-8  rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-md rounded-bl-md text-center font-design  font-black mb-10 text-4xl md:text-6xl lg:text-[5rem] lg:text-left'>
                     Stunning <span className=' underline   text-white'>lashes</span> in the blink of an eye
                     <span className='inline-block'><RiEyeCloseLine className='inline-block ml-3' /> <FaHeart className='inline-block xl:text-[3rem]' /></span>
                 </h1>
@@ -79,9 +79,9 @@ function Hero() {
             {/*  */}
 
             {/* Desktop View */}
-            <div className='hidden xl:block'>
+            <div className='hidden lg:block'>
                 <Swiper
-                    className='cursor-grab active:cursor-grabbing w-[500px] absolute -top-[2rem] rounded-2xl h-[1300px] rotate-[15deg] right-[8rem]'
+                    className='cursor-grab active:cursor-grabbing min-w-[500px] absolute -top-[2rem] rounded-2xl flex flex-col justify-center h-[120vh] rotate-[15deg] right-[2rem]'
                     spaceBetween={0}
                     slidesPerView={4.7}
                     loop={true}
@@ -91,45 +91,23 @@ function Hero() {
                         delay: 0,
                         disableOnInteraction: true,
                     }}
+
                     modules={[Autoplay]}
                     direction={"vertical"}
                 >
-                    <SwiperSlide><img src={Eyes3} alt='eyes-3' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes2} alt='eyes-2' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes1} alt='eyes-1' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes4} alt='eyes-4' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes6} alt='eyes-6' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes5} alt='eyes-5' className=' object-contain' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes3} alt='eyes-3' className=' w-full  h-full object-cover' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes2} alt='eyes-2' className=' w-full  h-full object-cover' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes1} alt='eyes-1' className=' w-full  h-full object-cover' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes4} alt='eyes-4' className=' w-full  h-full object-cover' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes6} alt='eyes-6' className=' w-full  h-full object-cover' /></SwiperSlide>
+                    <SwiperSlide><img src={Eyes5} alt='eyes-5' className=' w-full  h-full object-cover' /></SwiperSlide>
                 </Swiper>
             </div>
 
-            {/* Ipad Pro View */}
-            <div className='hidden lg:block xl:hidden'>
-                <Swiper
-                    className='h-[1500px] rotate-[15deg] -right-[8rem] w-[500px] absolute top-0 rounded-2xl '
-                    spaceBetween={0}
-                    slidesPerView={6}
-                    loop={true}
-                    speed={1500}
-                    freeMode={true}
-                    autoplay={{
-                        delay: 0,
-                        disableOnInteraction: true,
-                    }}
-                    modules={[Autoplay]}
-                    direction={"vertical"}
-                >
-                    <SwiperSlide><img src={Eyes3} alt='eyes-3' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes2} alt='eyes-2' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes1} alt='eyes-1' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes4} alt='eyes-4' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes6} alt='eyes-6' className=' object-contain' /></SwiperSlide>
-                    <SwiperSlide><img src={Eyes5} alt='eyes-5' className=' object-contain' /></SwiperSlide>
-                </Swiper>
-            </div>
+
 
             {/* Iphone Ipad Mini View */}
-            <div className='absolute left-0 top-[7rem] md:top-[10rem] w-screen lg:hidden block'>
+            <div className='absolute left-0 top-[7rem] w-screen lg:hidden block'>
                 <Swiper
                     direction='horizontal'
                     className='h-[120px] md:h-[150px] drop-shadow-sm opacity-80'
@@ -150,8 +128,7 @@ function Hero() {
 
                 </Swiper>
             </div>
-
-            <div className='absolute left-0 bottom-[2rem] md:bottom-[4rem] w-screen lg:hidden block'>
+            <div className=' absolute left-0 bottom-[1rem]  w-screen lg:hidden block'>
                 <Swiper
                     direction='horizontal'
                     slidesPerView={2.5}

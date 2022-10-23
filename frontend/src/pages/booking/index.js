@@ -80,7 +80,7 @@ const FormInput = ({
           type='text'
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className='font-design ring-2 ring-neutral-400  p-3 text-lg rounded-lg focus:outline-2 focus:outline-offset-1 focus:outline-sky-500 text-secondary'
+          className='font-design border-2 border-neutral-400  p-3 text-lg rounded-lg focus:outline-2 focus:outline-offset-1 focus:outline-sky-500 text-secondary'
         />
       )}
 
@@ -90,7 +90,7 @@ const FormInput = ({
           type={'email'}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className='font-design ring-2 ring-neutral-400  p-3 text-lg rounded-lg focus:outline-2 focus:outline-offset-1 focus:outline-sky-500 text-secondary'
+          className='font-design border-2 border-neutral-400  p-3 text-lg rounded-lg focus:outline-2 focus:outline-offset-1 focus:outline-sky-500 text-secondary'
         />
       )}
     </div>
@@ -160,14 +160,12 @@ const Dropdown = ({
 
   return (
     <div
-      className={`${
-        open ? '' : 'overflow-hidden'
-      } ${z} relative  text-secondary bg-white   lg:drop-shadow-md lg:rounded-xl xl:drop-shadow-lg `}>
+      className={`${open ? '' : 'overflow-hidden'
+        } ${z} relative  text-secondary bg-white   lg:drop-shadow-md lg:rounded-xl xl:drop-shadow-lg `}>
       <div
         onClick={() => setOpen(!open)}
-        className={`${
-          open ? 'lg:border-b-2' : 'border-b-2 lg:border-b-0'
-        } flex py-6 px-5 md:p-7 justify-between items-center cursor-pointer  lg:p-8`}>
+        className={`${open ? 'lg:border-b-2' : 'border-b-2 lg:border-b-0'
+          } flex py-6 px-5 md:p-7 justify-between items-center cursor-pointer  lg:p-8`}>
         <h2 className='font-semibold text-xl text-secondary flex items-center space-x-4 md:text-2xl lg:text-3xl xl:text-4xl'>
           {header}
         </h2>
@@ -179,9 +177,8 @@ const Dropdown = ({
       </div>
 
       <div
-        className={`${
-          open ? 'block' : 'hidden '
-        }  lg:px-5 transition-all ease-in-out duration-200`}>
+        className={`${open ? 'block' : 'hidden '
+          }  lg:px-5 transition-all ease-in-out duration-200`}>
         {content}
       </div>
     </div>
@@ -431,8 +428,8 @@ function Booking() {
                       {item === 'mini'
                         ? 'mini fill'
                         : item === 'other'
-                        ? 'other services'
-                        : item}
+                          ? 'other services'
+                          : item}
                     </p>
                     <ul className='flex flex-col space-y-3 '>
                       {allServices[item].map((item, idx) => (
@@ -453,13 +450,12 @@ function Booking() {
                           />
                           <label
                             htmlFor={`service-${item._id}`}
-                            className={`${
-                              service !== null
+                            className={`${service !== null
                                 ? item._id !== service._id
                                   ? 'text-neutral-400'
                                   : 'font-semibold'
                                 : ''
-                            } 
+                              } 
                                                         capitalize text-lg lg:text-xl
                                                     `}>
                             {item.name}{' '}
@@ -484,8 +480,8 @@ function Booking() {
                       {item === 'mini'
                         ? 'mini fill'
                         : item === 'other'
-                        ? 'other services'
-                        : item}
+                          ? 'other services'
+                          : item}
                     </p>
                     <ul className='flex flex-col space-y-3 '>
                       {allServices[item].map((item, idx) => (
@@ -506,13 +502,12 @@ function Booking() {
                           />
                           <label
                             htmlFor={`service-${item._id}`}
-                            className={`${
-                              service !== null
+                            className={`${service !== null
                                 ? item._id !== service._id
                                   ? 'text-neutral-400'
                                   : 'font-semibold'
                                 : ''
-                            } 
+                              } 
                                                         capitalize text-lg lg:text-xl
                                                     `}>
                             {item.name}{' '}
@@ -572,9 +567,8 @@ function Booking() {
                 <span>Date:</span>
 
                 <span
-                  className={`${
-                    bookDate ? ' font-design ' : 'text-neutral-400  '
-                  }  ml-3`}>
+                  className={`${bookDate ? ' font-design ' : 'text-neutral-400  '
+                    }  ml-3`}>
                   {bookDate
                     ? moment(bookDate).format('dddd MMM DD, YYYY')
                     : 'Pick a Date'}
@@ -592,11 +586,10 @@ function Booking() {
                       <button
                         key={`${item}-${idx}`}
                         onClick={() => setTime(item.time)}
-                        className={`${
-                          item.time === time
+                        className={`${item.time === time
                             ? 'ring-primary-400 bg-primary-400 font-semibold text-white'
                             : 'ring-neutral-300 text-secondary'
-                        } cursor-pointer px-4 py-2 font-design uppercase ring-4  rounded-md`}>
+                          } cursor-pointer px-4 py-2 font-design uppercase ring-4  rounded-md`}>
                         {item.time}
                       </button>
                     ))}
@@ -737,11 +730,10 @@ function Booking() {
                 <button
                   onClick={() => setTerms(!terms)}
                   className={`
-                                    ${
-                                      terms
-                                        ? 'border-blue-500 bg-blue-500 hover:bg-blue-600 hover:border-blue-600'
-                                        : 'border-neutral-400 hover:bg-neutral-100 hover:border-neutral-500'
-                                    } 
+                                    ${terms
+                      ? 'border-blue-500 bg-blue-500 hover:bg-blue-600 hover:border-blue-600'
+                      : 'border-neutral-400 hover:bg-neutral-100 hover:border-neutral-500'
+                    } 
                                     rounded-sm border-4 w-[25px] h-[25px] flex items-center justify-center transition-all ease-in-out duration-200
                                 `}>
                   {terms && <FaCheck className='text-white text-sm' />}

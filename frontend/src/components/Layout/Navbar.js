@@ -14,7 +14,7 @@ import { MdMenu, MdOutlineClose } from 'react-icons/md'
 
 // Constants
 import { Socials } from './Footer'
-console.log('Say what')
+
 
 const navLinks = [
     { text: 'about', link: '/about' },
@@ -34,8 +34,8 @@ const MobileMenu = () => {
         dispatch(closeMobileMenu())
     }
     return (
-        <div className={`${mobileMenu ? 'translate-x-0' : 'translate-x-full'} transition-all ease-in-out duration-300 fixed inset-0 z-[150] h-screen bg-primary-400 flex flex-col text-white lg:hidden`}>
-            <div className='flex items-center space-x-3 justify-end px-10 py-1 h-[90px]'>
+        <div className={`${mobileMenu ? 'translate-x-0' : 'translate-x-full'} transition-all ease-in-out duration-300 fixed inset-0 z-[150] h-screen bg-primary-500 flex flex-col text-white lg:hidden`}>
+            <div className='flex items-center  justify-end absolute right-5 -top-2 h-[90px]'>
                 <MdOutlineClose
                     onClick={() => dispatch(closeMobileMenu())}
                     className='cursor-pointer text-[2rem]'
@@ -47,7 +47,7 @@ const MobileMenu = () => {
                     <div
                         key={`mobile-menu-${item.text}`}
                         onClick={() => handleNavigate(item.link)}
-                        className={`cursor-pointer w-full text-center py-10 active:bg-yellow-500`}>
+                        className={`cursor-pointer w-full text-center py-10 active:bg-accent-600`}>
                         <span className={`${pathname === item.link ? 'underline underline-offset-8' : ''} capitalize font-semibold text-5xl `}>
                             {item.text}
                         </span>

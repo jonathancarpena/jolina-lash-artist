@@ -14,14 +14,14 @@ import Image from '../../images/certificate.jpg'
 
 function Credentials() {
     return (
-        <div className='bg-gradient-to-b from-primary-300 to-primary-500 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.50)]   text-white rounded-xl py-20 relative flex flex-col items-center space-y-10 lg:space-y-0 lg:flex-row lg:px-[15rem] lg:justify-around'>
+        <div className='bg-gradient-to-b from-primary-300 to-primary-500 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.50)]   text-white rounded-xl py-20 relative flex flex-col items-center space-y-10 lg:space-y-0 lg:flex-row lg:px-[12rem] lg:justify-between'>
 
             <div className='w-[300px] h-[500px]  lg:w-[500px] lg:h-[700px] relative flex justify-center items-center z-10 rounded-xl overflow-hidden ring-8 ring-secondary '>
                 <img src={Image} alt="certificate" className=' w-full h-full object-cover' />
             </div>
 
             <div className='flex flex-col px-10 items-center justify-center space-y-5 text-secondary z-10 md:px-20 md:space-y-10 xl:px-0 xl:w-[50%]'>
-                <h1 className='w-max text-center ring-8 ring-secondary rounded-bl-[2rem]  rounded-tr-[2rem] p-5 bg-white text-[2rem] font-semibold text-primary-400  md:text-[3rem] lg:text-[5rem]'>
+                <h1 className='w-max text-center ring-8 ring-secondary rounded-bl-[2rem]  rounded-tr-[2rem] p-5 bg-white text-[2rem] font-semibold text-primary-400  md:text-[3rem] lg:text-[4rem]'>
                     Be Your Best Self.
                 </h1>
 

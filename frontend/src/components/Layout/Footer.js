@@ -32,7 +32,7 @@ function Footer() {
 
             <div className='max-w-[1500px] w-full  py-16 px-12  z-10 '>
                 {/* Links */}
-                <div className=' flex flex-col space-y-12 md:flex-row md:space-y-0 md:items-start md:space-x-10 md:justify-between mb-10'>
+                <div className=' flex flex-col space-y-12 lg:flex-row lg:space-y-0 lg:items-start lg:space-x-10 lg:justify-between mb-10'>
                     <Brand darkBg={true} />
 
                     {/* Quick Links */}
