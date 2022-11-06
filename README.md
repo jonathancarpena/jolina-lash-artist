@@ -11,12 +11,12 @@
 ## 📸 Screenshots
 
 <ul style="display:flex flex-direction:column">
-<img src="./screenshots/landing.PNG" width="690" height="375" alt="landing"> 
-<img src="./screenshots/services.PNG" width="690" height="375" alt="services">
-<img src="./screenshots/single-service.PNG" width="690" height="375" alt="single-service">    
-<img src="./screenshots/booking-page.PNG" width="690" height="375" alt="booking-page">    
-<img src="./screenshots/availability.PNG" width="690" height="375" alt="booking-slots">
-<img src="./screenshots/bookings.PNG" width="690" height="375" alt="admin-bookings">
+<img src="./screenshots/landing.PNG" style="max-width:100%; max-height:375px;" alt="landing"> 
+<img src="./screenshots/services.PNG" style="max-width:100%; max-height:375px;" alt="services">
+<img src="./screenshots/single-service.PNG" style="max-width:100%; max-height:375px;" alt="single-service">    
+<img src="./screenshots/booking-page.PNG" style="max-width:100%; max-height:375px;" alt="booking-page">    
+<img src="./screenshots/availability.PNG" style="max-width:100%; max-height:375px;" alt="booking-slots">
+<img src="./screenshots/bookings.PNG" style="max-width:100%; max-height:375px;" alt="admin-bookings">
 </ul>
 
 ### Mobile Design
