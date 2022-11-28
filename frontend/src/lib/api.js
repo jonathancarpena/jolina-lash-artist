@@ -3,7 +3,7 @@ import axios from 'axios'
 // Uncomment for Development
 // const BASE_API = 'http://localhost:5000/api'
 
-const BASE_API = 'https://jolina-lashes.herokuapp.com/api'
+const BASE_API = 'https://jolina-lash-artist-api.onrender.com/api'
 
 // SERIVCES //
 export async function get_AllServices() {
